@@ -1,5 +1,5 @@
 # flowpaper-downloader
-Python script for downloading flowpaper presentations
+Python script for downloading flowpaper presentations and some other tool for converting to pdf
 # Install
 -  Tested on python 3.11 (windows), for linux maybe you have to change the images path format
 -  pip install selenium
