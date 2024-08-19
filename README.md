@@ -17,7 +17,7 @@ Python script for downloading flowpaper presentations and some other tool for co
 ![image](https://github.com/user-attachments/assets/3a00b424-7928-4ded-bbc9-f7f2401847f3)
 ![image](https://github.com/user-attachments/assets/e0eb0cff-3096-41b8-94a0-1eced9c975a5)
 
-# Optional - Create PDF file
+# Create PDF file
 -  Just run the script : python3 pdf_converter.py
 
 ![image](https://github.com/user-attachments/assets/ed9d9527-a8f3-4c8c-8417-9d5dd943062c)
