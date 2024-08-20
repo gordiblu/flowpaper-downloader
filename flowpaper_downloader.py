@@ -16,6 +16,8 @@ driver.set_window_size( 3840, 2160)
 max_pages = 44
 #url
 url = "https://flowpaper.com/flipbook/https://flowpaper.com/example.pdf#page=1"
+#images save path
+path="images\\"
 
         
 def screenshot(page_number, url):
@@ -28,14 +30,14 @@ def screenshot(page_number, url):
     try:
         div_element = driver.find_element(By.ID, f"turn-page-wrapper-{page_number}")
         save_file = f"{page_number}.png"
-        div_element.screenshot(f"images\\{save_file}")
+        div_element.screenshot(f"{path}{save_file}")
     except: print(f"Failed to save page {page_number}...")
     
     # get div2 element by ID | save into a folder previuously created 
     try:
         div_element2 = driver.find_element(By.ID, f"turn-page-wrapper-{page_number+1}")
         save_file2 = f"{page_number+1}.png"
-        div_element2.screenshot(f"images\\{save_file2}")
+        div_element2.screenshot(f"{path}{save_file2}")
     except: print(f"Failed to save page {page_number+1}...")
     
   
