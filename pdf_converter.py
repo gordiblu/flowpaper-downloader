@@ -1,20 +1,20 @@
 from PIL import Image
 import os
 
-# Ruta de la carpeta donde se encuentran las imágenes
-images_folder = "images\\"
+# folder path where .png are located
+path = "images\\"
 
-# Obtener la lista de archivos en la carpeta y filtrarla para que solo incluya archivos .png
+# filter by .png
 images_files = sorted(
-    [f for f in os.listdir(images_folder) if f.endswith(".png")],
+    [f for f in os.listdir(path) if f.endswith(".png")],
     key=lambda x: int(os.path.splitext(x)[0].replace("bbd", ""))
 )
 
 # char images in object image list
-images = [Image.open(os.path.join(images_folder, f)) for f in images_files]
+images = [Image.open(os.path.join(path, f)) for f in images_files]
 
-# Ruta del archivo PDF de salida
-pdf_path = "images\\images.pdf"
+# pdf file name and path
+pdf_path = f"{path}images.pdf"
 
 # Save
 images[0].save(pdf_path, "PDF", resolution=100.0, save_all=True, append_images=images[1:])
